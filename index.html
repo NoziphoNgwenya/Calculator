@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="myStyle.css">
+    
+</head>
+<body>
+    <!-- outer div  -->
+<div class="container"> 
+    <!-- main calculator div -->
+<div class = "calculator">
+<form>
+    <div class="displayAns">
+        <!-- displaying the output or calculated number -->
+    <input type="text" id="display">
+    </div>
+    
+    <!-- 1st calculator buttons row -->
+    <div>
+        
+        <input type="button" value="(" onclick="addValueToDisplay('(')" class= "operatorButtons button" >
+        <input type="button" value=")" onclick="addValueToDisplay(')')" class="operatorButtons button">
+        <input type="button" value="Ans" onclick="calculate()" class="operatorButtons button">
+        <input type="button" value="Del" onclick="display.value = display.value.toString().slice(0,-1)" class="operatorButtons button">
+        <input type="button" value="Clear" onclick="clearDisplayValue()" class="operatorButtons button">
+    </div>
+
+    <!-- 2nd calculator buttons row -->
+    <div>
+        <input type="button" value="7" onclick="addValueToDisplay('7')" class = "button">
+        <input type="button" value="8" onclick="addValueToDisplay('8')" class = "button">
+        <input type="button" value="9" onclick="addValueToDisplay('9')" class = "button">
+        <input type="button" value="%" onclick="display.value += '%'" class="operatorButtons button">
+        <!-- supposed to be a square root sign..... lol -->
+        <input type="button" value="^" onclick="display.value += '**'" class="operatorButtons button">
+    </div>
+    <!-- 3rd calculator buttons row -->
+    <div>
+        <input type="button" value="4" onclick="addValueToDisplay('4')" class = "button">
+        <input type="button" value="5" onclick="addValueToDisplay('5')" class = "button">
+        <input type="button" value="6" onclick="addValueToDisplay('6')" class = "button">
+        <input type="button" value="x" onclick="addValueToDisplay('*')" class="operatorButtons button">
+        <input type="button" value="÷" onclick="addValueToDisplay('/')" class="operatorButtons button">
+    </div>
+    <!-- 4th calculator buttons row -->
+    <div>
+        <input type="button" value="1" onclick="addValueToDisplay('1')" class = "button">
+        <input type="button" value="2" onclick="addValueToDisplay('2')" class = "button">
+        <input type="button" value="3" onclick="addValueToDisplay('3')" class = "button">
+        <input type="button" value="+" onclick="addValueToDisplay('+')" class="operatorButtons button">
+        <input type="button" value="-" onclick="addValueToDisplay('-')" class="operatorButtons button">
+    </div>
+<!-- 5th calculator buttons row -->
+<div>
+    <input type="button" value="." onclick="addValueToDisplay('.')" class="operatorButtons button">
+    <input type="button" value="0" onclick="addValueToDisplay('0')" class="operatorButtons button">
+    <input type="button" value="+-" onclick="addValueToDisplay('+-')" class="operatorButtons button">
+    <input type="button" value="Enter"  onclick="calculate()" class="equalsButton operatorButtons button">
+    
+</div>
+    
+</form>
+</div>
+</div>
+<script src = "myScript.js"></script>
+</body>
+</html>
